@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure, Button, VStack } from "@chakra-ui/react";
+import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure, Button, Grid, Box } from "@chakra-ui/react";
 
 const Index = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -11,17 +11,27 @@ const Index = () => {
       <Modal isOpen={isOpen} onClose={onClose} size="2xl">
         <ModalOverlay />
         <ModalContent minWidth="560px">
-          <ModalHeader>New Dataset</ModalHeader>
+          <ModalHeader bg="blue.100">Important Information</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <VStack spacing={4}>
-              {/* Section 1 */}
-              <div>Section 1 content goes here...</div>
-              {/* Section 2 */}
-              <div>Section 2 content goes here...</div>
-              {/* Section 3 */}
-              <div>Section 3 content goes here...</div>
-            </VStack>
+            <Grid templateRows="repeat(4, 1fr)" gap={4}>
+              {}
+              <Box border="1px" borderColor="gray.200" p={3} borderRadius="md">
+                Section 1 content goes here...
+              </Box>
+              {}
+              <Box border="1px" borderColor="gray.200" p={3} borderRadius="md">
+                Section 2 content goes here...
+              </Box>
+              {}
+              <Box border="1px" borderColor="gray.200" p={3} borderRadius="md">
+                Section 3 content goes here...
+              </Box>
+              {}
+              <Box border="1px" borderColor="gray.200" p={3} borderRadius="md">
+                Section 4 content goes here...
+              </Box>
+            </Grid>
           </ModalBody>
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={onClose}>
