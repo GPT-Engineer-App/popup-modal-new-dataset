@@ -2,7 +2,7 @@ import React from "react";
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure, Button, Grid, Box } from "@chakra-ui/react";
 
 const Index = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure({ isOpen: true });
 
   return (
     <>
